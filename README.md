@@ -1,5 +1,12 @@
 # roost-service
 
+> **本仓库已归档（2026-09-08）。** 通用服务层已并入 roost-kit：Go 包从
+> `github.com/tjbdwanghaibo/roost-service/<svc>` 迁到 **`github.com/tjbdwanghaibo/roost-kit/service/<svc>`**
+> （roost-kit ≥ v1.13.0）；`servicemods` 的常量并入 `roost-kit/mods`（`service.*` 前缀不变）。
+> 最后一个独立版本是 **v1.5.4**，仍可 `go get`，但不再接受修改。已有工程用 roost-codegen ≥ v1.15.0 的
+> `roost project upgrade --consolidate` 自动改写 import 与 go.mod。收敛方案与决定见 roost-core
+> `docs/ARCHITECTURE_V2_CONSOLIDATION_PLAN.zh-CN.md`。
+
 roost 框架的**通用服务层**：与玩法无关的公共服务，作为库提供给业务仓装配。
 
 每个服务是一个包，内含请求/响应类型、`Client` 接口与 bus 实现、服务端实现、
